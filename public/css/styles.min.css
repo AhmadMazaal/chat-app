@@ -220,4 +220,11 @@ button:disabled {
   .chat--sidebar {
     width: 180px;
   }
+  .compose {
+    padding: 5px;
+    padding-bottom: 20px;
+  }
+  .compose form {
+    margin-right: 5px;
+  }
 }
