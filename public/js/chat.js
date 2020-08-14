@@ -9,24 +9,16 @@ const locationTemplate = document.querySelector("#location-template").innerHTML;
 const sidebarTemplate = document.querySelector("#sidebar-template").innerHTML;
 const sidebar = document.querySelector("#sidebar");
 const modal = document.querySelector("#myModal");
-const close = document.getElementsByClassName("close")[0];
+const closed = document.getElementsByClassName("close")[0];
 
 const autoscroll = () => {
-  // New message element
   const $newMessage = messages.lastElementChild;
 
-  // Height of the new message
   const newMessageStyles = getComputedStyle($newMessage);
   const newMessageMargin = parseInt(newMessageStyles.marginBottom);
   const newMessageHeight = $newMessage.offsetHeight + newMessageMargin;
-
-  // Visible height
   const visibleHeight = messages.offsetHeight;
-
-  // Height of messages container
   const containerHeight = messages.scrollHeight;
-
-  // How far have I scrolled?
   const scrollOffset = messages.scrollTop + visibleHeight;
 
   if (containerHeight - newMessageHeight <= scrollOffset) {
@@ -107,4 +99,4 @@ socket.emit("join", { displayName, room }, (err) => {
     location.href = "/";
   }
 });
-close.onclick = () => (modal.style.display = "none");
+closed.onclick = () => (modal.style.display = "none");
