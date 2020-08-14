@@ -202,3 +202,22 @@ button:disabled {
   text-decoration: none;
   cursor: pointer;
 }
+@media (max-width: 620px) {
+  /* .chat--sidebar {
+    display: none;
+  }
+  .chat--main {
+    display: block;
+    flex-grow: 1;
+  } */
+  button,
+  #btn-submit,
+  #join-btn,
+  #btn-share {
+    font-size: auto;
+    padding: 5px;
+  }
+  .chat--sidebar {
+    width: 180px;
+  }
+}
