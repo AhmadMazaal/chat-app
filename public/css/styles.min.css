@@ -1,7 +1,8 @@
 :root {
   --timeline-danger: #d9534f;
   --timeline-success: #5cb85c;
-  --timeline-avacado: #56a16e;
+  --timeline-avacado: #5cc064;
+
   --timeline-Pearl: #15202b;
   --timeline-fire: #e85b2a;
   --timeline-primary: #52a2f3;
@@ -52,9 +53,12 @@ button,
   transition: background 0.3s ease;
   border-radius: 3px;
 }
-button:hover {
+button:hover,
+#btn-submit:hover,
+#join-btn:hover {
   background: var(--timeline-Pearl);
   color: var(--timeline-avacado);
+  font-weight: bold;
 }
 button:disabled {
   cursor: default;
@@ -226,5 +230,8 @@ button:disabled {
   }
   .compose form {
     margin-right: 5px;
+  }
+  .centered-form--box {
+    width: 320px;
   }
 }
